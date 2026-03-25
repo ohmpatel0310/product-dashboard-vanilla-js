@@ -2,7 +2,7 @@
 
 function fetchProductsThen() {
     fetch(`https://www.course-api.com/javascript-store-products`)
-        .then(reponse => {
+        .then(response => {
             if (!response.ok) {
                 throw new Error(`Network response was not ok`);
             }
@@ -41,7 +41,7 @@ async function fetchProductsAsync() {
 }
 
 
-// Step 5:
+// Step 5: Displaying the first 5 products on the webpage
 
 function displayProducts(products) {
     const container = document.getElementById('product-container');
@@ -62,4 +62,15 @@ function displayProducts(products) {
         `;
         container.appendChild(productCard);
     });
+}
+
+
+// Step 6: Error handling function
+
+function handleError(error) {
+
+    console.error(`An error occurred: ${error.message}`);
+
+    const container = document.getElementById('product-container');
+    container.innerHTML = `<p class="error-message">Sorry, we couldn't load the products. Please try again later.</p>`;
 }
