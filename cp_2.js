@@ -74,3 +74,8 @@ function handleError(error) {
     const container = document.getElementById('product-container');
     container.innerHTML = `<p class="error-message">Sorry, we couldn't load the products. Please try again later.</p>`;
 }
+
+// Step 7: Calling both functions to execute the logic
+
+fetchProductsThen();
+fetchProductsAsync();
