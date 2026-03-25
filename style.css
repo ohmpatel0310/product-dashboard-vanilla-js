@@ -1,0 +1,74 @@
+/* Step 8: Final Styling */
+
+:root {
+    --dark-chocolate: #3e2723;
+    --milk-chocolate: #5d4037;
+    --cream: #fff8e1;
+    --accent-orange: #ffab91;
+}
+
+body {
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-chocolate);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark-chocolate);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 2px solid var(--milk-chocolate);
+    padding: 15px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    overflow: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--dark-chocolate);
+}
+
+.product-card p {
+    font-weight: bold;
+    color: var(--milk-chocolate);
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(69, 39, 35, 0.3);
+    border-color: var(--accent-orange)
+}
+
+.error-message {
+    color: #d32f2f;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
